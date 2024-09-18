@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plot Dropdown</title>
+    <style>
+        #plot-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        img {
+            width: 80%;
+            height: auto;
+        }
+    </style>
+    <script>
+        function showPlot() {
+            var plotDropdown = document.getElementById("plotDropdown");
+            var selectedValue = plotDropdown.value;
+            var plotImage = document.getElementById("plotImage");
+
+            if (selectedValue === "ageGroupMoodPlot") {
+                plotImage.src = "age_group_and_mood.png";
+            } else if (selectedValue === "mentalHealthHoursPlot") {
+                plotImage.src = "mental_health_vs_hours.png";
+            } else if (selectedValue === "musicAnxietyPlot") {
+                plotImage.src = "music_anxiety_plot.png";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Select a Plot to Display</h1>
+
+    <select id="plotDropdown" onchange="showPlot()">
+        <option value="">-- Select a plot --</option>
+        <option value="age_group_and_mood.png">Age Group and Mood Improvement</option>
+        <option value="mental_health_vs_hours.png">Mental Health vs Hours of Music</option>
+        <option value="music_anxiety_plot.png">Music Genres and Anxiety Levels</option>
+    </select>
+
+    <div id="plot-container">
+        <img id="plotImage" src="" alt="Select a plot to display" />
+    </div>
+
+</body>
+</html>
