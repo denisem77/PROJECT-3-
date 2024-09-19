@@ -1,3 +1,42 @@
+DROP TABLE IF EXISTS temp_table;
+
+Create TABLE temp_table (
+	"Timestamp" TIMESTAMP WITHOUT TIME ZONE,
+	Age INT,
+	Primary_streaming_service VARCHAR,
+	Hours_per_day FLOAT,
+	While_working VARCHAR,
+	Instrumentalist VARCHAR,
+	Composer VARCHAR,
+	Fav_genre VARCHAR,
+	Exploratory VARCHAR,
+	Foreign_languages VARCHAR,
+	BPM INT,
+	Frequency_Classical VARCHAR,
+	Frequency_Country VARCHAR,
+	Frequency_EDM VARCHAR,
+	Frequency_Folk VARCHAR,
+	Frequency_Gospel VARCHAR,
+	Frequency_Hip_hop VARCHAR,
+	Frequency_Jazz VARCHAR,
+	Frequency_K_pop VARCHAR,
+	Frequency_Latin VARCHAR,
+	Frequency_Lofi VARCHAR,
+	Frequency_Metal VARCHAR,
+	Frequency_Pop VARCHAR,
+	"Frequency_R&B" VARCHAR,
+	Frequency_Rap VARCHAR,
+	Frequency_Rock VARCHAR, 
+	Frequency_Video_game_music VARCHAR,
+	Anxiety INT,
+	Depression INT,
+	Insomnia INT,
+	OCD INT,
+	Music_effects VARCHAR,
+	Permissions VARCHAR
+);
+
+
 SELECT * FROM public.temp_table
 LIMIT 100
 
@@ -89,4 +128,4 @@ FROM public.temp_table;
 
 SELECT * FROM music_meds;
 
-COPY music_meds TO 'C:/Program Files/PROJECT 3/Resources/music_meds.csv' WITH CSV HEADER;
+COPY music_meds TO 'C:/Users/Denis/OneDrive/Desktop/PROJECT 3/Resources/music_meds.csv' WITH CSV HEADER;
